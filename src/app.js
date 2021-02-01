@@ -4,7 +4,7 @@ let alreadyChecking = false;
 
 const verifyBVN = async (bvn) => {
   try {
-    const response = await fetch('http://localhost:5000/verify/bvn', {
+    const response = await fetch('https://bvn-verifier.herokuapp.com/verify/bvn', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
