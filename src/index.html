@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/fsi-favicon.ico" type="image/x-icon">
+    <title>BVN Verfier</title>
+
+    <style>
+        input {
+            padding: 0.5em;
+            padding-right: 1.3em;
+            letter-spacing: 10px;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        input:placeholder-shown {
+            letter-spacing: normal;
+        }
+
+        input.busy {
+            background-image: url(./images/busy.svg);
+        }
+        
+        input.valid {
+            background-image: url(./images/valid.svg);
+        }
+        
+        input.invalid {
+            background-image: url(./images/invalid.svg);
+        }
+
+        input.error {
+            background-image: url(./images/feedback.svg);
+        }
+
+        img {
+            width:100px;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div data-app>
+        <img src="./images/bvn-logo.webp" alt="BVN" />
+        <input data-bvn-input
+               placeholder="Enter a valid BVN" 
+               type="text">
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
