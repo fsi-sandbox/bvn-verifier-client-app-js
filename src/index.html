@@ -14,11 +14,16 @@
 
     <style>
       input {
-        padding: 0.5em;
+        padding: 1em 0.5em;
         padding-right: 1.3em;
         letter-spacing: 10px;
+        border: 2px solid black;
         background-repeat: no-repeat;
         background-position: right center;
+      }
+
+      input:focus {
+        border: 2px solid black;
       }
 
       input:placeholder-shown {
@@ -53,7 +58,11 @@
   <body>
     <div data-app>
       <img src="./images/bvn-logo.webp" alt="BVN" />
-      <input data-bvn-input placeholder="Enter a valid BVN" type="text" />
+      <input data-bvn-input 
+        placeholder="Enter a valid BVN" 
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]*" />
     </div>
 
     <script type="module" src="./app.js"></script>
