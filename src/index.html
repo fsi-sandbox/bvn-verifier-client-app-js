@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/fsi-favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="./images/fsi-favicon.ico" type="image/x-icon" />
+    <link rel="preload" href="./images/bvn-logo.webp" as="image" type="image/webp" />
+    <link rel="preload" href="./images/busy.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./images/feedback.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./images/invalid.svg" as="image" type="image/svg+xml" />
+    <link rel="preload" href="./images/valid.svg" as="image" type="image/svg+xml" />
     <title>BVN Verfier</title>
 
     <style>
-        input {
-            padding: 0.5em;
-            padding-right: 1.3em;
-            letter-spacing: 10px;
-            background-repeat: no-repeat;
-            background-position: right center;
-        }
+      input {
+        padding: 0.5em;
+        padding-right: 1.3em;
+        letter-spacing: 10px;
+        background-repeat: no-repeat;
+        background-position: right center;
+      }
 
-        input:placeholder-shown {
-            letter-spacing: normal;
-        }
+      input:placeholder-shown {
+        letter-spacing: normal;
+      }
 
-        input.busy {
-            background-image: url(./images/busy.svg);
-        }
-        
-        input.valid {
-            background-image: url(./images/valid.svg);
-        }
-        
-        input.invalid {
-            background-image: url(./images/invalid.svg);
-        }
+      input.busy {
+        background-image: url(./images/busy.svg);
+      }
 
-        input.error {
-            background-image: url(./images/feedback.svg);
-        }
+      input.valid {
+        background-image: url(./images/valid.svg);
+      }
 
-        img {
-            width:100px;
-            height: auto;
-            display: block;
-            min-width: 100px;
-            min-height: 54px;
-        }
+      input.invalid {
+        background-image: url(./images/invalid.svg);
+      }
+
+      input.error {
+        background-image: url(./images/feedback.svg);
+      }
+
+      img {
+        width: 100px;
+        height: auto;
+        display: block;
+        min-width: 100px;
+        min-height: 54px;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div data-app>
-        <img src="./images/bvn-logo.webp" alt="BVN" />
-        <input data-bvn-input
-               placeholder="Enter a valid BVN" 
-               type="text">
+      <img src="./images/bvn-logo.webp" alt="BVN" />
+      <input data-bvn-input placeholder="Enter a valid BVN" type="text" />
     </div>
 
     <script type="module" src="./app.js"></script>
-</body>
+  </body>
 </html>
