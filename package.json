@@ -4,12 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "parcel build ./src/index.html"
+    "dev": "lite-server --baseDir='src'"
   },
   "devDependencies": {
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1"
-  },
-  "dependencies": {}
+    "eslint-plugin-import": "^2.22.1",
+    "lite-server": "^2.6.1"
+  }
 }
