@@ -1,10 +1,12 @@
 const digitPattern = /^\d+$/;
 const bvnPattern = /^\d{11}$/;
+const BACKEND = 'https://bvn-verifier.herokuapp.com';
+
 let alreadyChecking = false;
 
 const verifyBVN = async (bvn) => {
   try {
-    const response = await fetch('https://bvn-verifier.herokuapp.com/verify/bvn', {
+    const response = await fetch(`${BACKEND}/verify/bvn`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -14,7 +16,7 @@ const verifyBVN = async (bvn) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.warn(error);
+    console.warn(error); 
     return {
       error: error.message
     };
@@ -24,7 +26,10 @@ const verifyBVN = async (bvn) => {
 const handleInput = async (e) => {
   const { target } = e;
   const { value } = target;
-  if (alreadyChecking || !digitPattern.test(value) || !bvnPattern.test(value)) return;
+
+  if (alreadyChecking
+      || !digitPattern.test(value)
+      || !bvnPattern.test(value)) return;
 
   alreadyChecking = true;
   requestAnimationFrame(() => {
