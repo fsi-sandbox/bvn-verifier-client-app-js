@@ -16,7 +16,7 @@ const verifyBVN = async (bvn) => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.warn(error);
+    console.warn(error); 
     return {
       error: error.message
     };
